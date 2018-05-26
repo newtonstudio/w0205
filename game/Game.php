@@ -31,14 +31,13 @@ class Game {
 			}
 		}
 
+		//good solution for many participants
 		$tmp_array = array();
 		foreach($this->q as $v) {
 			$tmp_array[$v->name] = $v->speed;	
 		}
 
 		arsort($tmp_array);
-
-	
 
 		$i=0;
 		foreach($tmp_array as $k=>$v) {
@@ -52,6 +51,7 @@ class Game {
 
 
 		/*
+		//Easy Solution for two participants
 		if($this->q[0]->speed > $this->q[1]->speed) {
 			echo $this->q[0]->name." WIN! <br/>";
 		} else if ($this->q[0]->speed < $this->q[1]->speed) {
